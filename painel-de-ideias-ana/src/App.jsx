@@ -28,7 +28,7 @@ const ideiasFeitas = ideias.filter((ideia) => ideia.feita).length;
 const totalIdeias = ideias.length;
   
 return (
-<div>
+<div class= "caixa">
   <h1>Painel de ideias</h1>
   <form onSubmit={(event) => {
   event.preventDefault();
@@ -62,15 +62,16 @@ return (
   </form>
 
   {erro && <p>{erro}</p>}
-    <div>
+    <div class = "ideia">
       {ideias.map((ideia) => (
-        <p key={ideia.id}>
+         <div class = "check">
+        <p key={ideia.id}> </p>
       
-
+       
      <input type="checkbox"
            checked={ideia.feita}
            onChange={() => alternarFeita(ideia.id)}
-               /> 
+               />
       <span className={ideia.feita ? "ideia-feita" : ""}
       >
           {ideia.texto}
@@ -78,8 +79,10 @@ return (
       <button onClick={() => apagarIdeia(ideia.id)}>
       ✕
     </button>
-        </p>
+    
         
+      </div>        
+
       ))}
     </div>
     <footer>{`Ideias no painel: ${totalIdeias} ... Ideias concluídas: ${ideiasFeitas}`}</footer>

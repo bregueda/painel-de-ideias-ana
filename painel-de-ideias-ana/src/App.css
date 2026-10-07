@@ -1,11 +1,11 @@
 .ideia-feita 
   {
   text-decoration: line-through;
-  color: #c01111;
+  color: #1d0028;
 }
 
 body {
-  background-color:rgb(170, 96, 204);
+  background-color:rgb(219, 172, 241);
   color: rgb(51, 2, 54);
   font-family:fantasy;
   margin: 0;
@@ -13,11 +13,11 @@ body {
 }
 
 footer {
-  position: fixed;
+  position: center;
   bottom: 0;
   left: 0;
-  width: 100%;
-  background-color: #ce68f3;
+  width: 95%;
+  background-color: #dc99f2;
   color: #4e044b;
   text-align: center;
   padding: 10px;
@@ -62,7 +62,7 @@ form {
   display: flex;
   flex-direction: column;
   width: 650px;
-  background-color: rgb(214, 152, 227);
+  background-color: rgb(195, 136, 217);
   padding: 10px;
   border-radius: 12px;
   justify-content: center;
@@ -71,9 +71,27 @@ form {
 }
 
 input::placeholder {
-  color: #ffddfe;
+  color: #120012;
 }
 
 footer::first-line {
   font-weight: bold;
 }
+
+.check{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  margin-top: 12px;
+ 
+}
+
+.check span{
+  flex: 1;
+  margin: 0;
+   background-color:color(rgb(187, 163, 206));
+  
+}
+
+
