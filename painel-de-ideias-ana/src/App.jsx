@@ -24,6 +24,8 @@ function apagarIdeia(id) {
   )
 }
 
+const ideiasFeitas = ideias.filter((ideia) => ideia.feita).length;
+const totalIdeias = ideias.length;
   
 return (
 <div>
@@ -80,7 +82,10 @@ return (
         
       ))}
     </div>
+    <footer>{`Ideias no painel: ${totalIdeias} | Ideias concluídas: ${ideiasFeitas}`}</footer>
   </div>
+
+
 )
 
 }
