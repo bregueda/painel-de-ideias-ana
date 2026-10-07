@@ -65,15 +65,15 @@ return (
     <div>
       {ideias.map((ideia) => (
         <p key={ideia.id}>
-          {ideia.texto}
+      
 
      <input type="checkbox"
            checked={ideia.feita}
            onChange={() => alternarFeita(ideia.id)}
                /> 
-      <span className={ideia.feita ? "feita" : ""}
+      <span className={ideia.feita ? "ideia-feita" : ""}
       >
-          
+          {ideia.texto}
       </span>
       <button onClick={() => apagarIdeia(ideia.id)}>
       ✕
@@ -82,7 +82,7 @@ return (
         
       ))}
     </div>
-    <footer>{`Ideias no painel: ${totalIdeias} | Ideias concluídas: ${ideiasFeitas}`}</footer>
+    <footer>{`Ideias no painel: ${totalIdeias} ... Ideias concluídas: ${ideiasFeitas}`}</footer>
   </div>
 
 
